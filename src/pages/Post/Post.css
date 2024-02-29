@@ -1,0 +1,118 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: stretch;
+  flex: 1;
+
+  h1 {
+    font-size: 1.25rem;
+    color: var(--color-blue-dark);
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .small-text {
+    font-size: 1rem;
+  }
+}
+
+.post-head {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 6fr;
+  column-gap: 1.375rem;
+
+  .post-head__image {
+  }
+
+  .post-head__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .post-head__text-site {
+    align-self: flex-end;
+    text-align: right;
+  }
+  .post-head__text-post {
+    align-self: flex-start;
+  }
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 1.75rem;
+
+  .post-content__extract-card {
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+    background: var(--color-white);
+
+    padding: 0.875rem 1.375rem;
+    border-radius: 11px;
+
+    font-family: Merriweather;
+    font-family: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  .post-content__text {
+    font-family: Merriweather;
+    font-size: 1rem;
+    line-height: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
+.post-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end;
+
+  height: 54px; /* TODO: Change to a var to addapt to chat button */
+  margin-right: calc(58px + 2rem); /* TODO: Change to a var to addapt to chat button */
+  .post-footer__delete-button {
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (width < 768px) {
+  .post-head {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    .post-head__text-site {
+      display: none;
+    }
+
+    .post-head__text-post {
+      .small-text {
+        text-align: center;
+      }
+    }
+
+    .post-head__image {
+      width: 60%;
+    }
+  }
+
+  .post-content {
+    .post-content__extract-card {
+      padding: 1.375rem;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

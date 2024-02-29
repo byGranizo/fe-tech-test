@@ -1,0 +1,14 @@
+.anon-layout {
+  width: 53rem;
+  margin: 0 auto;
+
+  main {
+    overflow-y: initial;
+  }
+}
+
+@media screen and (width < 768px) {
+  .anon-layout {
+    width: 100%;
+  }
+}
